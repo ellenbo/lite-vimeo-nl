@@ -240,7 +240,8 @@ let LiteVimeoEmbed = /** @class */ (() => {
                 // FIXME: add a setting for autoplay
                 let apValue = ((this.autoLoad && this.autoPlay) || (!this.autoLoad)) ?
                     "autoplay=1" : "";
-                let srcUrl = new URL(`/video/${this.videoId}?${apValue}&#t=${this.videoStartAt}`, "https://player.vimeo.com/");
+                //let srcUrl = new URL(`/video/${this.videoId}?${apValue}&#t=${this.videoStartAt}`, "https://player.vimeo.com/");
+              let srcUrl = new URL(`/video/${this.videoId}`, "https://player.vimeo.com/");
                 // TODO: construct src value w/ URL constructor
                 const iframeHTML = `
 <iframe frameborder="0"
