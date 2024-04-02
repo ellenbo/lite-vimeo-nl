@@ -44,7 +44,7 @@ let LiteVimeoEmbed = /** @class */ (() => {
             this.addEventListener('click', () => this.addIframe());
         }
         get videoId() {
-            return encodeURIComponent(this.getAttribute('videoid') || '');
+            return decodeURIComponent(this.getAttribute('videoid') || '');
         }
         set videoId(id) {
             this.setAttribute('videoid', id);
